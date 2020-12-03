@@ -1,0 +1,67 @@
+@import vars
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i')
+
+.content-box
+  max-width: $max-width
+  min-width: $min-width
+  margin: 0 auto
+
+  @media (min-width: $min-width)
+    padding: 0 1%
+
+  @media (max-width: $max-width - 20px)
+    padding: 0 20px
+  
+  @media (min-width: $max-width)
+    padding: 0
+
+body
+  font-family: 'Lato', sans-serif
+  color: $main-color
+  font-size: 16px
+
+/* fix footer to the end of the screen - START*/
+html,
+body
+  height: 100%
+
+*
+  box-sizing: border-box
+
+.container
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.content
+  flex: 1
+
+/* js - manipulation*/
+.hide-element
+  display: none
+
+/*header */
+.header
+  border-bottom: 1px solid #ececec
+  box-sizing: border-box
+  background-color: $grey-bkg
+
+.header-right
+  display: flex
+  align-items: center
+  justify-content: space-between
+  height: 60px
+
+/*footer */
+.footer-left
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  height: 100px
+
+/* fix footer in the end of the screen - END*/
+.footer
+  flex: 0
+  background-color: #e6e6e6
+  min-width: $min-width
